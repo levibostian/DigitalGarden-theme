@@ -1,0 +1,68 @@
+@import "../../node_modules/tachyons-sass/scss/variables";
+@import "../../node_modules/tachyons-sass/scss/utilities";
+@import "../../node_modules/tachyons-sass/scss/font-family";
+@import "../../node_modules/tachyons-sass/scss/font-weight";
+@import "../../node_modules/tachyons-sass/scss/type-scale";
+@import "../../node_modules/tachyons-sass/scss/font-style";
+@import "../../node_modules/tachyons-sass/scss/widths";
+@import "../../node_modules/tachyons-sass/scss/text-align";
+@import "../../node_modules/tachyons-sass/scss/links";
+@import "../../node_modules/tachyons-sass/scss/hovers";
+@import "../../node_modules/tachyons-sass/scss/typography";
+@import "../../node_modules/tachyons-sass/scss/spacing";
+@import "../../node_modules/tachyons-sass/scss/display";
+@import "../../node_modules/tachyons-sass/scss/flexbox";
+@import "../../node_modules/tachyons-sass/scss/line-height";
+@import "./custom";
+
+%text {
+    color: #111111;
+}
+
+%background {
+    background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    %text {
+        color: #F4F4F4;
+    }
+
+    %background {
+        background-color: #333333;
+    }
+}
+
+ul {
+    @extend .pa0;
+}
+
+body {
+    @extend %text;
+    @extend %background;
+    @extend .avenir;
+}
+
+a {
+    @extend .link;  
+    @extend .dim;  
+    @extend %text; // never been visited before color. should match :visited 
+
+    &:visited {
+        @extend %text;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1 {
+    @extend .f1;
+    
+}
+
+p {
+    @extend .measure;
+    @extend .lh-copy;
+}

@@ -1,0 +1,37 @@
+# baseURL: https://levi.earth # disable this to make sure all links are relevant or absolute so they always work no matter the base URL. 
+languageCode: en-us
+title: Levi Bostian
+theme: DigitalGarden
+
+author: Levi Bostian
+canonifyurls: true
+languagecode: en
+
+enableEmoji: true
+hasCJKLanguage: false
+
+pygmentsstyle: vs
+pygmentscodefences: true
+
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
+
+params:
+  sitename: Levi Bostian
+  # faviconfile = "images/favicon.png"
+  highlightjs: true
+  highlightjslanguages: ["r", "python", "stan"]
+  # uselatex: true
+  progressively: false
+# commentsrepo = "user/repo"
+
+menu:
+  primary:
+  - name: Life
+    url: /life/
+    weight: 1
+  - name: Work
+    url: /work/
+    weight: 2
+  - name: Earth 🌏
+    url: /earth/
+    weight: 3
