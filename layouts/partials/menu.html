@@ -1,0 +1,17 @@
+<div id="menu" class="">
+    <ul class=""> 
+        {{ $menuItems := .Site.Menus.primary.ByWeight }}
+        {{ $menuItemsCount := sub (len $menuItems) 1 }}
+        {{ range $index, $item := $menuItems }}
+        <li class="dib">
+            <a class="f3" href="{{ .URL }}">                
+                {{ $item.Name }}                
+            </a>
+
+            {{ if lt $index $menuItemsCount }} 
+                <span class="ph3">•</span>
+            {{ end }}
+        </li>
+        {{ end }}
+    </ul>
+</div>

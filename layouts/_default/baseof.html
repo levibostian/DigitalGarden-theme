@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ block "title" . }}{{ if .IsHome }} {{ .Site.Title }} {{ else }} {{ .Title }} - {{ .Site.Title }} {{ end }}{{ end }}</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="{{ .Description | default .Site.Params.description }}" />
+
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    {{ $sass := resources.Get "sass/_style.scss" }}
+    {{ $style := $sass | resources.ToCSS }}
+
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+    <link rel="shortcut icon"
+        href="{{ if .Site.Params.faviconfile }}{{ .Site.Params.faviconfile | relURL }}{{ else }}/images/favicon.png{{ end }}">
+
+    {{ if .Site.RSSLink }}
+    <link href="{{ .Site.RSSLink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+</head>
+
+<body>
+    {{ block "main" . }}{{ end }}
+</body>
+
+</html>
