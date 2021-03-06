@@ -17,7 +17,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.80.0'
-          extended: true
+          extended: true # required to compile SASS 
       - name: Build Hugo site
         run: hugo --minify        
       - name: Deploy to Netlify

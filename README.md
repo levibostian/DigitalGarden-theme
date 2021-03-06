@@ -26,3 +26,7 @@ This theme is *opinionated* and *evolving*. Feel free to use it for your own pro
 - [ ] Resource caching. Not sure how we will enable caching yet, but limiting the number of network requests is helpful. 
 
 > `*` indicates this is an optional, nice to have feature that may never happen. 
+
+# Development 
+
+I recommend [this VSCode extension](https://marketplace.visualstudio.com/items?itemName=budparr.language-hugo-vscode) for syntax highlighting of layouts, shortcode files, etc. 
