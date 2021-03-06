@@ -36,14 +36,13 @@ HOW TO USE:
 
 {{ $clickImageSrc := $imageSrc }}
 
-{{ $staticOriginalImagePath := delimit (slice "static" $originalImagePath) "/" }} 
+{{/* to use `fileExists` function, we are checking the file system before compile, not web server after compile. so, we need to get a `static/...` path. */}}
+{{ $staticOriginalImagePath := print "static/" $originalImagePath }}
 {{ if (fileExists $staticOriginalImagePath) -}}
     {{ $clickImageSrc = $originalImagePath }}
 {{- end }}
 
-{{/*
-    rel="" suggestions from: https://stackoverflow.com/a/15551842
-*/}}
+{{/* rel="" suggestions from: https://stackoverflow.com/a/15551842 */}}
 <a id="image-link" href="{{ $clickImageSrc }}" target="_blank" rel="noopener noreferrer">            
     <img src="{{ $imageSrc }}" alt="{{ $imageAlt }}" />
 </a>
