@@ -96,10 +96,7 @@ blockquote {
 }
 
 ul, ol {
-    // like what we do with headers and paragraph to make it centered, but we want the width less
-    @extend .center;
-    @extend .w-60-ns;
-    @extend .w-80;
+    @extend %text-content-size;    
 }
 
 
