@@ -51,12 +51,6 @@ $background-color: white;
     @extend .w-90;
 }
 
-
-
-ul {
-    @extend .pa0;
-}
-
 body {
     max-width: 1366px; // for super big displays, you have to have a maximum in order for your content to look good. 
     margin: 0 auto; // center the site. imagine being on an ultra wide monitor. without this, the content would be on the left. 
@@ -99,6 +93,13 @@ blockquote {
     @extend %hint-color; 
     font-style: italic;
     font-weight: lighter;
+}
+
+ul, ol {
+    // like what we do with headers and paragraph to make it centered, but we want the width less
+    @extend .center;
+    @extend .w-60-ns;
+    @extend .w-80;
 }
 
 
