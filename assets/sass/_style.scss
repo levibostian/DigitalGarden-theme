@@ -12,6 +12,7 @@
 @import "../../node_modules/tachyons-sass/scss/spacing";
 @import "../../node_modules/tachyons-sass/scss/display";
 @import "../../node_modules/tachyons-sass/scss/flexbox";
+@import "../../node_modules/tachyons-sass/scss/images";
 @import "../../node_modules/tachyons-sass/scss/line-height";
 @import "./custom";
 
@@ -21,6 +22,13 @@
 
 %background {
     background-color: white;
+}
+
+// we use this rule to give all the text a "measure" width without using the actual `measure` class. The measure class in tachyons works well for paragraphs but when using with headers the widths are different. so, we dont use measure and use our own instead for both so they always align. 
+%text-content-size {
+    @extend .center;
+    @extend .w-70-ns;
+    @extend .w-90;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,6 +46,8 @@ ul {
 }
 
 body {
+    max-width: 1366px; // for super big displays, you have to have a maximum in order for your content to look good. 
+    margin: 0 auto; // center the site. imagine being on an ultra wide monitor. without this, the content would be on the left. 
     @extend %text;
     @extend %background;
     @extend .avenir;
@@ -58,11 +68,17 @@ a {
 }
 
 h1 {
-    @extend .f1;
-    
+    @extend .f1;    
 }
 
-p {
-    @extend .measure;
+figure { // figure is a built-in hugo shortcode for showing images. the default margin is too much padding making the inner images smaller then they need to be. adding top/bottom padding and a 0 left/right padding maximizes images while giving it some room from surrounding text. 
+    margin: 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    @extend %text-content-size;
+}
+
+p {    
     @extend .lh-copy;
 }
