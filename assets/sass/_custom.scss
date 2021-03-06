@@ -4,3 +4,9 @@
 //     text-decoration: none;
 //     :hover text-decoration: under;
 // }
+
+.content {
+    @extend .w-50-ns;
+    @extend .w-70-m;
+    @extend .w-90;
+}
