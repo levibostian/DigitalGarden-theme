@@ -1,5 +1,5 @@
 <div id="menu" class="">
-    <ul class=""> 
+    <ul class="pa0"> 
         {{ $menuItems := .Site.Menus.primary.ByWeight }}
         {{ $menuItemsCount := sub (len $menuItems) 1 }}
         {{ range $index, $item := $menuItems }}
