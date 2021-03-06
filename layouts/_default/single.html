@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ partial "header" . }}
+
+<div class="flex flex-column items-center">
+    <div class="content">
+        {{ .Content }}
+    </div>    
+</div>
+
+{{ partial "footer" . }}
+{{ end }}

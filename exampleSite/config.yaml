@@ -26,12 +26,9 @@ params:
 
 menu:
   primary:
-  - name: Life
-    url: /life/
-    weight: 1
-  - name: Work
-    url: /work/
+  - name: Foo 
+    url: /foo/
+    weight: 1  
+  - name: GitHub
+    url: https://github.com/levibostian/
     weight: 2
-  - name: Earth 🌏
-    url: /earth/
-    weight: 3
