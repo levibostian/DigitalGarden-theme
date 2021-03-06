@@ -16,12 +16,32 @@
 @import "../../node_modules/tachyons-sass/scss/line-height";
 @import "./custom";
 
+$text-color: #111111;
+$background-color: white; 
+
 %text {
-    color: #111111;
+    color: $text-color;
+}
+%hint-color {
+    color: lighten($text-color, 30%);
+}
+%background {
+    background-color: $background-color;
 }
 
-%background {
-    background-color: white;
+@media (prefers-color-scheme: dark) {
+    $text-color: #F4F4F4;
+    $background-color: #333333; 
+    
+    %text {
+        color: $text-color;
+    }
+    %hint-color {
+        color: darken($text-color, 30%);
+    }
+    %background {
+        background-color: $background-color;
+    }
 }
 
 // we use this rule to give all the text a "measure" width without using the actual `measure` class. The measure class in tachyons works well for paragraphs but when using with headers the widths are different. so, we dont use measure and use our own instead for both so they always align. 
@@ -31,15 +51,7 @@
     @extend .w-90;
 }
 
-@media (prefers-color-scheme: dark) {
-    %text {
-        color: #F4F4F4;
-    }
 
-    %background {
-        background-color: #333333;
-    }
-}
 
 ul {
     @extend .pa0;
@@ -82,3 +94,11 @@ h1, h2, h3, h4, h5, h6, p {
 p {    
     @extend .lh-copy;
 }
+
+blockquote {
+    @extend %hint-color; 
+    font-style: italic;
+    font-weight: lighter;
+}
+
+
