@@ -1,4 +1,4 @@
-baseURL: https://levi.earth # disable this to make sure all links are relevant or absolute so they always work no matter the base URL. 
+# baseURL: https://levi.earth # disable this to make sure all links are relevant or absolute so they always work no matter the base URL. 
 languageCode: en-us
 title: Levi Bostian
 theme: DigitalGarden
