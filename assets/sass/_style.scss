@@ -92,8 +92,15 @@ h1 {
     @extend .f1;    
 }
 
-figure { // figure is a built-in hugo shortcode for showing images. the default margin is too much padding making the inner images smaller then they need to be. adding top/bottom padding and a 0 left/right padding maximizes images while giving it some room from surrounding text. 
-    margin: 30px 0;
+p { // centering images. hugo puts images into a <p> so we do the centered on it since it's the container. 
+    img {
+        @extend .db;
+        @extend .center;
+    }
+}
+
+img {
+    @extend .mv4; // images need a little whitespace. 
 }
 
 h1, h2, h3, h4, h5, h6, p {
