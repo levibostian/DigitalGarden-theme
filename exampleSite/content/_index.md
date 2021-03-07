@@ -14,10 +14,10 @@ List:
 * item
 * item
 
-Other list:
-1. foo 
-2. foo 
-3. foo 
+Other list (this one is longer to see if we have enough space between items):
+1. **foo**: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min
+2. **foo**: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min
+3. **foo**: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min
 
 `<hr/>` incoming...
 
