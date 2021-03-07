@@ -124,6 +124,10 @@ blockquote {
 
 ul, ol {
     @extend %text-content-size;    
+
+    li {
+        @extend .pv1;
+    }
 }
 
 
