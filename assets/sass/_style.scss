@@ -93,7 +93,9 @@ h1 {
     @extend .f1;    
 }
 
-p { // centering images. hugo puts images into a <p> so we do the centered on it since it's the container. 
+// centering images. hugo puts images into a <p> so we do the centered on it since it's the container. 
+// for shortcodes, as long as you add the `image-container` class to the container, it will center. 
+p, .image-container { 
     img {
         @extend .db;
         @extend .center;
