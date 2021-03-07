@@ -104,6 +104,11 @@ p {
     @extend .lh-copy;
 }
 
+hr {
+    @extend .w-80-ns;
+    @extend .w-100;
+}
+
 blockquote {
     @extend %hint-color; 
     font-style: italic;
