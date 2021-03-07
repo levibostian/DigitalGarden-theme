@@ -1,3 +1,9 @@
+/**
+This file's job:
+1. do all imports so that this is the only file that we need to import in our html header
+2. good, default logic. <a/>, <h1/> styling of the built-in html elements. 
+*/
+
 @import "../../node_modules/tachyons-sass/scss/variables";
 @import "../../node_modules/tachyons-sass/scss/utilities";
 @import "../../node_modules/tachyons-sass/scss/font-family";
@@ -17,6 +23,7 @@
 @import "./custom";
 
 $text-color: #111111;
+$link-color: #026633;
 $background-color: white; 
 
 %text {
@@ -25,12 +32,16 @@ $background-color: white;
 %hint-color {
     color: lighten($text-color, 30%);
 }
+%link {
+    color: $link-color;
+}
 %background {
     background-color: $background-color;
 }
 
 @media (prefers-color-scheme: dark) {
     $text-color: #F4F4F4;
+    $link-color: #009001;
     $background-color: #333333; 
     
     %text {
@@ -38,6 +49,9 @@ $background-color: white;
     }
     %hint-color {
         color: darken($text-color, 30%);
+    }    
+    %link {
+        color: $link-color;
     }
     %background {
         background-color: $background-color;
@@ -62,7 +76,8 @@ body {
 a {
     @extend .link;  
     @extend .dim;  
-    @extend %text; // never been visited before color. should match :visited 
+    @extend %text;
+    text-decoration: none;
 
     &:visited {
         @extend %text;

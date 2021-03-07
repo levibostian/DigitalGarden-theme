@@ -1,12 +1,20 @@
-
-
-// .hover_link {
-//     text-decoration: none;
-//     :hover text-decoration: under;
-// }
+/**
+This file's job:
+1. custom IDs and classes of our site styling belongs here. 
+*/
 
 .content {
     @extend .w-50-ns;
     @extend .w-70-m;
     @extend .w-90;
+
+    // typed content links and links in header/footer are styled differently. 
+    a {
+        text-decoration: underline;
+        @extend %link; 
+
+        &:visited {
+            @extend %link;
+        }
+    }
 }
