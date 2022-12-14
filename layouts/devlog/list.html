@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ partial "header" . }}
+
+  <ul>
+  {{ range .Pages }}
+    <li>
+      <strong><a href="{{ .Permalink }}">{{ .Title }}</a></strong> - {{ .Date.Format "January 2, 2006" }}
+    </li>
+  {{ end }}
+  </ul> 
+
+{{ partial "footer" . }}
+{{ end }}
